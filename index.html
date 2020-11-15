@@ -6,57 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .box {
-            background-color: aliceblue;
-            border-radius: 20px;
-            width: 350px;
-            height: 50px;
-            font-size: 20px;
-            padding-left: 5px;
-            border-color: white;
-        }
-        
-        .label {
-            color: white;
-            font-size: 25px;
-        }
-    </style>
+
 </head>
 
 <body>
-    <nav>
-        <ul class="menu">
-            <li class="logo">
-                <a href="#"><img style="height: 50px;width: auto" src="img/logo.png" alt=""></a>
+    <!-- START NAVBAR -->
+    <nav class="navbar">
+        <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+                Menu
+            </label>
+        <a href="#" class="logo"><img style="height: 50px;width: auto" src="img/logo.png" alt=""></a>
+        <input type="checkbox" id="chkToggle"></input>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Beranda</a>
             </li>
-            <li class="item"><a href="#">Beranda</a></li>
-            <li class="item"><a href="#">Produk</a></li>
-            <li class="item"><a href="#">Kerja</a></li>
-            <li class="item"><a href="#">Event</a></li>
-            <li class="item"><a href="#">Masuk</a></li>
-            <li class="item"><a href="" class="button button-orange">Daftar</a></li>
-            <li class="toggle"><a href="#">Menu</a></li>
+            <li>
+                <a href="#" class="nav-links">Produk</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Kerja</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Event</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Masuk</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links button button-orange">Daftar</a>
+            </li>
         </ul>
     </nav>
-    <div style="margin: auto; margin: 20px;">
-        <div class="baris">
-            <div class="kolom" style="background-color:#FFFAF4; padding: 100px 0px 100px 10px">
-                <h2>Perluas <br> Usaha Anda</h2>
-                <p>Ekspansi produk anda agar lebih dikenal banyak orang</p>
-                <button style="background-color: #F9672B; color: white; padding: 10px 30px 10px 30px; border-radius: 20px; border-color: #F9672B;">Mulai</button>
+    <!-- END NAVBAR -->
+    <!-- START HEADER -->
+    <div>
+        <div style="background-color: #FFFAF4;" class="container">
+            <div class="kols">
+                <div>
+                    <h1>Perluas <br> Usaha Anda</h1>
+                    <br>
+                    <hr class="new5">
+                    <br>
+                    <p>Ekspansi produk anda agar lebih dikenal banyak orang</p>
+                    <br>
+                    <br>
+                    <a type="button" class="button button-orange">Gabung</a>
+                </div>
             </div>
-            <div class="kolom" style="background-color:#FFFAF4; text-align: center;">
-                <img style="height: 300px;width: auto" src="img/umkm.png" alt="">
+            <div class="kols">
+                <div style="text-align: center;" class='middle-div'>
+                    <img style="height: 300px;width: auto" src="img/umkm.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-    <footer>
-        <div style="margin-top: 30px;">
+    <!-- END HEADER -->
+    <!-- START MENU -->
+    <div>
+        <div style="width: 100%; text-align: center;">
+            <h3>
+                Eksplorasi Lebih Jauh
+            </h3>
+        </div>
+        <br>
+        <div>
+            <div style="text-align: center;">
+                <hr style="margin: 0 auto;" class="new5">
+            </div>
+        </div>
+        <div class="container">
+            <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+                <div style="text-align: center;">
+                    <img style="height: 100px;width: 100px;object-fit: contain; margin-bottom: 10px;" src="img/produk.png" alt="">
+                    <br>
+                    <span>Produk</span>
+                </div>
+            </div>
+            <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+                <div style="text-align: center;">
+                    <img style="height: 100px;width: 100px;object-fit: contain; margin-bottom: 10px;" src="img/kerja.png" alt="">
+                    <br>
+                    <span>Kerja</span>
+                </div>
+            </div>
+            <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+                <div style="text-align: center;">
+                    <img style="height: 100px;width: 100px;object-fit: contain; margin-bottom: 10px;" src="img/event.png" alt="">
+                    <br>
+                    <span>Event</span>
+                </div>
+            </div>
 
         </div>
+    </div>
+    <!-- END MENU -->
+    <!-- START SLIDER -->
+    <div class="container">
+        <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+            <div style="text-align: center;">
+                <h3>Beberapa Produk Anggota Go UMKM</h3>
+                <hr style="margin: 0 auto;" class="new5">
+            </div>
+        </div>
+        <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+            <div style="text-align: center;">
+                <div style="height: 200px; width: 100%; background-image: url('./img/awicho.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+                </div>
+                <div style="background-color: tomato; margin-left: 20px; margin-right: 20px; padding-top: 10px; padding-bottom: 10px; margin-top: -20px;">
+                    <h3 style="color: white;">Awicho</h3>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+            <div style="text-align: center;">
+                <div style="height: 200px; width: 100%; background-image: url('./img/apparel.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+                </div>
+                <div style="background-color: tomato; margin-left: 20px; margin-right: 20px; padding-top: 10px; padding-bottom: 10px; margin-top: -20px;">
+                    <h3 style="color: white;">Alghfry</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- END SLIDER -->
+    <!-- START BANNER -->
+    <div style="margin: 30px;" class="header">
+        <div>
+            <h1>Mari Bergabung Bersama Kami</h1>
+            <br>
+            <span>Bertemu dengan ribuan pelaku usaha</span>
+            <br>
+            <br>
+            <a type="button" class="button button-white">Gabung</a>
+        </div>
+    </div>
+    <!-- END BANNER -->
+    <!-- START FOOTER -->
+    <footer>
+        <div style="background-color: #FFFAF4;" class="container-foot">
+            <div class="kols">
+                <ul style="list-style-type:none;">
+                    <li>Beranda</li>
+                    <li>Produk</li>
+                    <li>Kerja</li>
+                    <li>Event</li>
+                </ul>
+            </div>
+            <div class="kols">
+                <ul style="list-style-type:none;">
+                    <li>Kebijakan Privasi</li>
+                    <li>Kritik Saran</li>
+                    <li>Panduan</li>
+                </ul>
+            </div>
+            <div class="kols">
+                <div class="foot">
+                    <h3>Keep In Touch With Us</h3>
+                    <br>
+                    <img style="height: 80px;width: auto" src="img/logo.png" alt="">
+                    <br>
+                    <br>
+                    <span><img style="height: 30px; width: 30px;" src="img/wa.png" alt=""></span>
+                    <span><img style="height: 30px; width: 30px;" src="img/fb.png" alt=""></span>
+                    <span><img style="height: 30px; width: 30px;" src="img/ig.png" alt=""></span>
+                    <span><img style="height: 30px; width: 30px;" src="img/mail.png" alt=""></span>
+                </div>
+            </div>
+        </div>
     </footer>
+    <!-- END FOOTER -->
 </body>
-<script src="js/script.js"></script>
 
 </html>
