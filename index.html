@@ -178,6 +178,39 @@
         </div>
     </footer>
     <!-- END FOOTER -->
+    <!-- MODAL -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div style="margin: 30px;" class="header">
+                <div>
+                    <h1>Selamat Datang di Go-UMKM</h1>
+                    <br>
+                    <span>Mari Perluas Usahamu</span>
+                    <br>
+                    <br>
+                    <a type="button" class="close button button-white">Mulai</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- MODAL -->
 </body>
+<script>
+    var modal1 = document.getElementById("myModal");
+    var close1 = document.getElementsByClassName("close")[0];
+    modal1.style.display = "block";
+    close1.onclick = function() {
+        modal1.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
+</script>
 
 </html>
