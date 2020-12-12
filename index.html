@@ -30,8 +30,9 @@
             <li>
                 <a href="#" class="nav-links">Event</a>
             </li>
+            <!-- disini modal -->
             <li>
-                <a href="login.html" class="nav-links">Masuk</a>
+                <a class="nav-links" id="myBtn">Masuk</a>
             </li>
             <li>
                 <a href="daftar.html" class="nav-links button button-orange">Daftar</a>
@@ -197,10 +198,41 @@
 
     </div>
     <!-- MODAL -->
+
+    <!-- disini modal -->
+    <div id="modaldaftar" class="Modal">
+        <div class="isiModal">
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+            <h2 style="color: #f9672b;">Masuk</h2>
+            <br>
+            <form style="text-align: center; background-color: #f9672b;">
+                <a><img src="img/avatar.png" alt="profile" width="100px" height="100px"></a>
+                <div class="forma">
+                    <p>Nama Pengguna</p>
+                    <input type="text">
+                </div>
+                <div class="forma">
+                    <p>Kata Sandi</p>
+                    <input type="password">
+                </div>
+    
+                <button type="submit" class="masuk">
+                            Masuk 
+                        </button>
+    
+                <div class="bawah">
+                    <a href="daftar.html">Belum punya akun? Daftar disini</a> <br>
+                    <a href="#">Lupa kata sandi?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- sampai disini modal -->
 </body>
 <script>
     var modal1 = document.getElementById("myModal");
     var close1 = document.getElementsByClassName("close")[0];
+    
     modal1.style.display = "block";
     close1.onclick = function() {
         modal1.style.display = "none";
@@ -211,6 +243,24 @@
             modal1.style.display = "none";
         }
     }
+
+    var modal = document.getElementById("modaldaftar");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("masuk")[0];
+    
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+        }
 </script>
 
 </html>
