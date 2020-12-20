@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Beranda</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -203,36 +203,36 @@
     <div id="modaldaftar" class="Modal">
         <div class="isiModal">
             <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
-            <h2 style="color: #f9672b;">Masuk</h2>
-            <br>
-            <form style="text-align: center; background-color: #f9672b;">
-                <a><img src="img/avatar.png" alt="profile" width="100px" height="100px"></a>
-                <div class="forma">
-                    <p>Nama Pengguna</p>
-                    <input type="text">
-                </div>
-                <div class="forma">
-                    <p>Kata Sandi</p>
-                    <input type="password">
-                </div>
-    
-                <button type="submit" class="masuk">
+                <h2 style="color: #f9672b;">Masuk</h2>
+                <br>
+                <form style="text-align: center; background-color: #f9672b;">
+                    <a><img src="img/avatar.png" alt="profile" width="100px" height="100px"></a>
+                    <div class="forma">
+                        <p>Nama Pengguna</p>
+                        <input type="text">
+                    </div>
+                    <div class="forma">
+                        <p>Kata Sandi</p>
+                        <input type="password">
+                    </div>
+
+                    <button type="submit" class="masuk">
                             Masuk 
                         </button>
-    
-                <div class="bawah">
-                    <a href="daftar.html">Belum punya akun? Daftar disini</a> <br>
-                    <a href="#">Lupa kata sandi?</a>
-                </div>
-            </form>
+
+                    <div class="bawah">
+                        <a href="daftar.html">Belum punya akun? Daftar disini</a> <br>
+                        <a href="#">Lupa kata sandi?</a>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <!-- sampai disini modal -->
+        <!-- sampai disini modal -->
 </body>
 <script>
     var modal1 = document.getElementById("myModal");
     var close1 = document.getElementsByClassName("close")[0];
-    
+
     modal1.style.display = "block";
     close1.onclick = function() {
         modal1.style.display = "none";
@@ -247,20 +247,20 @@
     var modal = document.getElementById("modaldaftar");
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("masuk")[0];
-    
+
     btn.onclick = function() {
-    modal.style.display = "block";
+        modal.style.display = "block";
     }
 
     span.onclick = function() {
-    modal.style.display = "none";
+        modal.style.display = "none";
     }
 
     window.onclick = function(event) {
-    if (event.target == modal) {
-    modal.style.display = "none";
-    }
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
+    }
 </script>
 
 </html>
