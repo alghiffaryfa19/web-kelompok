@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loker</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 
 <body>
@@ -17,10 +18,10 @@
         <input type="checkbox" id="chkToggle"></input>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="#" class="nav-links">Beranda</a>
+                <a href="/web-kelompok" class="nav-links">Beranda</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Produk</a>
+                <a href="produk.html" class="nav-links">Produk</a>
             </li>
             <li>
                 <a href="riwayat.html" class="nav-links">Kerja</a>
@@ -60,8 +61,8 @@
     </div>
     <!-- START MENU -->
     <div style="background-color: tomato; margin: 30px; border-radius: 25px;">
-        <div class="container">
-            <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
+        <div class="container" id="data">
+            <!-- <div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">
                 <div style="text-align: center;">
                     <div style="width: 100%; text-align: center;">
                         <p style="color: tomato;">
@@ -267,7 +268,7 @@
                         <a type="button" class="button button-orange">Kepoin</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <div style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
@@ -320,6 +321,26 @@
             </div>
         </div>
     </footer>
+    <script>
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5500/data/loker.json',
+            dataType: 'json',
+            success: function(data) {
+                var html = '';
+                var i;
+                for (i = 0; i < data.length; i++) {
+                    html += '<div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">';
+                    html += '<div style="text-align: center;">';
+                    html += '<div style="width: 100%; text-align: center;"><p style="color: tomato;">' + data[i].loker + '</p></div><br>';
+                    html += '<div><div><hr class="new6"></div></div><br>';
+                    html += '<div><p>' + data[i].deskripsi + '</p></div>';
+                    html += '<div><br><a type="button" class="button button-orange">Kepoin</a></div></div></div>';
+                }
+                $('#data').html(html);
+            }
+        });
+    </script>
 </body>
 
 </html>
