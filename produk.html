@@ -18,7 +18,7 @@
         <input type="checkbox" id="chkToggle"></input>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="/web-kelompok" class="nav-links">Beranda</a>
+                <a href="/" class="nav-links">Beranda</a>
             </li>
             <li>
                 <a href="produk.html" class="nav-links">Produk</a>
@@ -201,7 +201,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://127.0.0.1:5500/data/produk.json',
+            url: 'http://go-umkm.dakondigitalstudio.com/data/produk.json',
             dataType: 'json',
             success: function(data) {
                 var html = '';
@@ -209,9 +209,8 @@
                 for (i = 0; i < data.length; i++) {
                     html += '<div style="background-color: #FFFAF4; border-radius: 10px;" class="kols">';
                     html += '<div style="text-align: center;">';
-                    html += '<div style="height: 200px; width: 100%; background-image: url('
-                    '); background-size: cover; background-repeat: no-repeat;"></div>';
-                    html += '<div style="background-color: red; margin-left: 20px; margin-right: 20px; padding-top: 10px; padding-bottom: 10px; margin-top: -20px;"><h3 style="color: white;">' + data[i].nama_produk + '</h3></div>';
+                    html += '<div style="height: 200px; width: 100%; background-image: url(' + data[i].foto + '); background-size: cover; background-repeat: no-repeat;"></div>';
+                    html += '<div style="background-color: tomato; margin-left: 20px; margin-right: 20px; padding-top: 10px; padding-bottom: 10px; margin-top: -20px;"><h3 style="color: white;">' + data[i].nama_produk + '</h3></div>';
                     html += '</div></div>';
 
                     //so on 
